@@ -33,7 +33,7 @@
           '[~@config-filenames])
         leiningen-paths-setter
         `((ns-resolve 'midje.util.ecosystem 'midje.util.ecosystem/set-leiningen-paths!)
-          '~project)
+          '~(dissoc project :manifest))
           ]
 
     `(do (require 'midje.util.ecosystem)
